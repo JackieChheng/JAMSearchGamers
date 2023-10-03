@@ -23,9 +23,22 @@
         <div class="nav-wrapper grey darken-3">
           
           <ul id="nav-mobile" class="hide-on-med-and-down">
-            <li><a href="#">Home</a></li>
-            <li><a href="...">Genres</a></li>
-            <li><a href="gj">Best Deals</a></li>
+            <li><a href="#freeGames">Free Games</a></li>
+            <li><a href="#upcomingGames">Upcoming Free Games</a></li>
+            <!--look into material icons-->
+              <!-- Dropdown Trigger -->
+            <li><a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Discounted Games</a>
+            <!-- Dropdown Structure -->
+              <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#!">All</a></li>
+                <li><a href="#!">Games</a></li>
+                <li><a href="#!">Game Bundles</a></li>
+                <li><a href="#!">Game Editions</a></li>
+                <li><a href="#!">Game Add Ons</a></li>
+                <li><a href="#!">Editor</a></li>
+                <li><a href="#!">Game Demos</a></li>
+                <li><a href="#!">Apps</a></li>
+            </ul></li>
           </ul>
           <form>
             <div class="right input-field">
@@ -38,10 +51,11 @@
       </nav>
             
     <main>
-      <h2>Home</h2>
+      <h2 class="center-align">Free Games of the Week</h2>
         <div class="container-fluid">
-        <div class="row">
-        <div class="card col-sm-12 col-md-3">
+        <div id="freeGames" class="row">
+
+         <div class="card col-sm-12 col-md-3">
             <img src="./assets/images/Image-not-found.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
@@ -71,10 +85,16 @@
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>-->
+            </div>
           </div>
+
         </div>
       </div>
+
+      <main>
+        <h2 class="center-align">Free Upcoming Games</h2>
+          <div class="container-fluid">
+          <div id="upcomingGames" class="row">
     </main>
 
     <footer>
