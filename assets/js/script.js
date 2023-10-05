@@ -142,7 +142,7 @@ function generateGameSale() {
       img.src = gameSaleArray[i].image; 
       
       var cardBody = document.createElement("div");
-      cardBody.classList.add("card-body", "white-text");
+      cardBody.classList.add("card-body", "white-text", "align middle");
       
       var h5 = document.createElement("h5");
       h5.classList.add("card-title");
