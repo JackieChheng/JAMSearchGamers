@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-function generateGameSale() {
+function generateGameSale(gameSaleArray) {
   console.log("hey is this working")
       for (var i = 0; i < gameSaleArray.length; i++) {
       // HTML elements for card
@@ -190,8 +190,8 @@ $(".genre").on("click", function(){
           link: dataArray[i].url
         }
         gameSaleArray.push(saleGame)
-        generateGameSale();
       } 
+      generateGameSale(gameSaleArray);
     })
   })
 })
