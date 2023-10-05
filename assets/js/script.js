@@ -139,7 +139,7 @@ function generateGameSale() {
       card.style.width = "18rem";
       
       var img = document.createElement("img");
-      img.classList.add("card-img-top", "section", "img-fluid");
+      img.classList.add("card-img-top", "h-100", "d-inline-block");
       img.src = gameSaleArray[i].image; 
       
       var cardBody = document.createElement("div");
