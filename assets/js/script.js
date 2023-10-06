@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var freeGamesUrl = "https://epic-free-games.p.rapidapi.com/epic-free-games?rapidapi-key=206b08d759mshb06b9e5b9dbd779p1ec90ajsn4b8ad24f5041";
-  var upcomingGamesUrl = "https://epic-free-games.p.rapidapi.com/epic-free-games-coming-soon?rapidapi-key=206b08d759mshb06b9e5b9dbd779p1ec90ajsn4b8ad24f5041";
+  var freeGamesUrl = "https://epic-free-games.p.rapidapi.com/epic-free-games?rapidapi-key=dbbe26a28cmsh58d0c330cc6e4fcp1d024ajsnff75918c19c3";
+  var upcomingGamesUrl = "https://epic-free-games.p.rapidapi.com/epic-free-games-coming-soon?rapidapi-key=dbbe26a28cmsh58d0c330cc6e4fcp1d024ajsnff75918c19c3";
   //API's for free games of the week, upcoming free games, and test(Games that are discounted and what not)
   
   $('.dropdown-trigger').dropdown();
@@ -59,29 +59,31 @@ document.addEventListener("DOMContentLoaded", function () {
   // Generates the card for the freegames
   function generateFreeGames() {
     for (var i = 0; i < freeGamesArray.length; i++) {
-  //     // HTML elements for card
+       // HTML elements for card
       var card = document.createElement("div");
       card.classList.add("card", "col-sm-12", "col-md-3", "grey", "darken-3", "hoverable");
-      //card.style.width = "18rem";
+      card.style.width = "18rem";
       
       var img = document.createElement("img");
-      img.classList.add("card-img-top", "section", "img-fluid");
+      img.classList.add("card-img-top", "section", "img-fluid", "h-25",   "d-inline-block");
+      img.setAttribute('target', '_blank');
       img.src = freeGamesArray[i].image; 
       
       var cardBody = document.createElement("div");
-      cardBody.classList.add("card-body", "white-text");
+      cardBody.classList.add("card-body", "white-text", "d-inline-block", "d-flex", "justify-content-around", "flex-column");
       
       var h5 = document.createElement("h5");
-      h5.classList.add("card-title");
+      h5.classList.add("card-title", "d-inline-block");
       h5.textContent = freeGamesArray[i].name;
       
       var p = document.createElement("p");
-      p.classList.add("card-text");
+      p.classList.add("card-text", "d-inline-block");
       p.textContent = freeGamesArray[i].descr;
       
       var a = document.createElement("a");
       a.href = freeGamesArray[i].link;
-      a.classList.add("btn", "btn-primary")
+      a.classList.add("btn", "btn-primary", "d-inline-block")
+      a.setAttribute('target', '_blank');
       a.textContent = "view on site"
     
       freeGamesRow.appendChild(card)
@@ -97,15 +99,16 @@ document.addEventListener("DOMContentLoaded", function () {
     for (var i = 0; i < upcomingGamesArray.length; i++) {
        // HTML elements for card
       var card = document.createElement("div");
-      card.classList.add("card", "col-sm-12", "col-md-3", "grey", "darken-3");
+      card.classList.add("card", "col-sm-12", "col-md-3", "grey", "darken-3", "hoverable");
       card.style.width = "18rem";
       
       var img = document.createElement("img");
-      img.classList.add("card-img-top", "section", "img-fluid");
+      img.classList.add("card-img-top", "section", "img-fluid", "h-25",   "d-inline-block");
+      img.setAttribute('target', '_blank');
       img.src = upcomingGamesArray[i].image; 
       
       var cardBody = document.createElement("div");
-      cardBody.classList.add("card-body", "white-text");
+      cardBody.classList.add("card-body", "white-text", "d-inline-block", "d-flex", "justify-content-around", "flex-column");
       
       var h5 = document.createElement("h5");
       h5.classList.add("card-title");
@@ -118,6 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var a = document.createElement("a");
       a.href = upcomingGamesArray[i].link;
       a.classList.add("btn", "btn-primary")
+      a.setAttribute('target', '_blank');
       a.textContent = "view on site"
     
       upcomingGamesRow.appendChild(card)
@@ -134,27 +138,28 @@ function generateGameSale(gameSaleArray) {
       for (var i = 0; i < gameSaleArray.length; i++) {
       // HTML elements for card
       var card = document.createElement("div");
-      card.classList.add("card", "col-sm-12", "col-md-3", "grey", "darken-3");
+      card.classList.add("card", "col-sm-12", "col-md-3", "grey", "darken-3", "hoverable");
       card.style.width = "18rem";
       
       var img = document.createElement("img");
-      img.classList.add("card-img-top", "section", "img-fluid");
+      img.classList.add("card-img-top", "section", "img-fluid", "h-25",   "d-inline-block");
       img.src = gameSaleArray[i].image; 
       
       var cardBody = document.createElement("div");
-      cardBody.classList.add("card-body", "white-text");
+      cardBody.classList.add("card-body", "white-text", "d-inline-block", "d-flex", "justify-content-around", "flex-column");
       
       var h5 = document.createElement("h5");
-      h5.classList.add("card-title");
+      h5.classList.add("card-title", "d-inline-block");
       h5.textContent = gameSaleArray[i].name;
       
       var p = document.createElement("p");
-      p.classList.add("card-text");
+      p.classList.add("card-text", "d-inline-block");
       p.textContent = gameSaleArray[i].descr;
       
       var a = document.createElement("a");
       a.href = gameSaleArray[i].link;
-      a.classList.add("btn", "btn-primary")
+      a.classList.add("btn", "btn-primary", "d-inline-block")
+      a.setAttribute('target', '_blank');
       a.textContent = "view on site"
     
       GameSaleRow.appendChild(card);
@@ -194,4 +199,8 @@ $(".genre").on("click", function(){
       generateGameSale(gameSaleArray);
     })
   })
+
+
 })
+
+
