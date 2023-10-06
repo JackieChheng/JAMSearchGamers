@@ -57,9 +57,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![JAMSearchGamers Screen Shot][product-screenshot]](./assets/images/1.png)
-[![JAMSearchGamers Screen Shot][product-screenshot]](./assets/images/2.png)
-[![JAMSearchGamers Screen Shot][product-screenshot]](./assets/images/3.png)
+![JAMSearchGamers Screen Shot](./assets/images/1.png)
+![JAMSearchGamers Screen Shot](./assets/images/2.png)
+![JAMSearchGamers Screen Shot](./assets/images/3.png)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -71,6 +71,7 @@
 
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url]
+* & MaterialCSS(https://materializecss.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
