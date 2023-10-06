@@ -5,3 +5,8 @@ hr {
 #dropdown1 {
     list-style: none;
 }
+
+#display {
+    display: flex;
+    align-content: space-between;
+}
