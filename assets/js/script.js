@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
       var a = document.createElement("a");
       a.href = freeGamesArray[i].link;
-      a.classList.add("btn", "btn-primary")
+      a.classList.add("btn", "btn-primary", "grey", "darken-1")
       a.setAttribute('target', '_blank');
       a.textContent = "view on site"
     
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
       var a = document.createElement("a");
       a.href = upcomingGamesArray[i].link;
-      a.classList.add("btn", "btn-primary")
+      a.classList.add("btn", "btn-primary", "grey", "darken-1")
       a.setAttribute('target', '_blank');
       a.textContent = "view on site"
     
@@ -169,7 +169,7 @@ function generateGameSale(gameSaleArray) {
       
       var a = document.createElement("a");
       a.href = gameSaleArray[i].link;
-      a.classList.add("btn", "btn-primary")
+      a.classList.add("btn", "btn-primary", "grey", "darken-1")
       a.setAttribute('target', '_blank');
       a.textContent = "view on site"
     
