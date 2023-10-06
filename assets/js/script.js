@@ -65,16 +65,19 @@ document.addEventListener("DOMContentLoaded", function () {
       card.style.width = "18rem";
       
       var img = document.createElement("img");
-      img.classList.add("card-img-top", "section", "img-fluid", "h-25",   "d-inline-block");
+      img.classList.add("card-img-top", "section", "img-fluid", "h-25", "d-inline-block");
       img.setAttribute('target', '_blank');
       img.src = freeGamesArray[i].image; 
       
       var cardBody = document.createElement("div");
-      cardBody.classList.add("card-body", "white-text", "d-inline-block", "d-flex", "justify-content-around", "flex-column");
+      cardBody.classList.add("card-body", "white-text", "d-inline-block", "d-flex", "flex-column");
       
       var h5 = document.createElement("h5");
       h5.classList.add("card-title", "d-inline-block");
       h5.textContent = freeGamesArray[i].name;
+
+      var hr = document.createElement("hr");
+      hr.classList.add("white");
       
       var p = document.createElement("p");
       p.classList.add("card-text", "d-inline-block");
@@ -82,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
       var a = document.createElement("a");
       a.href = freeGamesArray[i].link;
-      a.classList.add("btn", "btn-primary", "d-inline-block")
+      a.classList.add("btn", "btn-primary")
       a.setAttribute('target', '_blank');
       a.textContent = "view on site"
     
@@ -90,8 +93,9 @@ document.addEventListener("DOMContentLoaded", function () {
       card.appendChild(img);
       card.appendChild(cardBody);
       cardBody.appendChild(h5);
+      cardBody.appendChild(hr);
       cardBody.appendChild(p);
-      cardBody.appendChild(a);
+      card.appendChild(a);
     }
   }
   
@@ -103,19 +107,22 @@ document.addEventListener("DOMContentLoaded", function () {
       card.style.width = "18rem";
       
       var img = document.createElement("img");
-      img.classList.add("card-img-top", "section", "img-fluid", "h-25",   "d-inline-block");
+      img.classList.add("card-img-top", "section", "img-fluid", "h-25", "d-inline-block");
       img.setAttribute('target', '_blank');
       img.src = upcomingGamesArray[i].image; 
       
       var cardBody = document.createElement("div");
-      cardBody.classList.add("card-body", "white-text", "d-inline-block", "d-flex", "justify-content-around", "flex-column");
+      cardBody.classList.add("card-body", "white-text", "d-inline-block", "d-flex", "flex-column");
       
       var h5 = document.createElement("h5");
-      h5.classList.add("card-title");
+      h5.classList.add("card-title", "d-inline-block");
       h5.textContent = upcomingGamesArray[i].name;
+
+      var hr = document.createElement("hr");
+      hr.classList.add("white");
       
       var p = document.createElement("p");
-      p.classList.add("card-text");
+      p.classList.add("card-text", "d-inline-block");
       p.textContent = upcomingGamesArray[i].descr;
       
       var a = document.createElement("a");
@@ -128,8 +135,9 @@ document.addEventListener("DOMContentLoaded", function () {
       card.appendChild(img);
       card.appendChild(cardBody);
       cardBody.appendChild(h5);
+      cardBody.appendChild(hr);
       cardBody.appendChild(p);
-      cardBody.appendChild(a);
+      card.appendChild(a);
     }
   }
 
@@ -146,11 +154,14 @@ function generateGameSale(gameSaleArray) {
       img.src = gameSaleArray[i].image; 
       
       var cardBody = document.createElement("div");
-      cardBody.classList.add("card-body", "white-text", "d-inline-block", "d-flex", "justify-content-around", "flex-column");
-      
+      cardBody.classList.add("card-body", "white-text", "d-inline-block", "d-flex", "flex-column");
+
       var h5 = document.createElement("h5");
       h5.classList.add("card-title", "d-inline-block");
       h5.textContent = gameSaleArray[i].name;
+            
+      var hr = document.createElement("hr");
+      hr.classList.add("white");
       
       var p = document.createElement("p");
       p.classList.add("card-text", "d-inline-block");
@@ -158,7 +169,7 @@ function generateGameSale(gameSaleArray) {
       
       var a = document.createElement("a");
       a.href = gameSaleArray[i].link;
-      a.classList.add("btn", "btn-primary", "d-inline-block")
+      a.classList.add("btn", "btn-primary")
       a.setAttribute('target', '_blank');
       a.textContent = "view on site"
     
@@ -166,8 +177,9 @@ function generateGameSale(gameSaleArray) {
       card.appendChild(img);
       card.appendChild(cardBody);
       cardBody.appendChild(h5);
+      cardBody.appendChild(hr);
       cardBody.appendChild(p);
-      cardBody.appendChild(a);
+      card.appendChild(a);
     }
 }
 
