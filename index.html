@@ -18,31 +18,30 @@
         <h1 class="center-align white-text">JAMSearchGamers</h1>
     </header>
     
-    <nav class="navbar sticky-top grey darken-3">
-        <div class="nav-wrapper grey darken-3">
-          
+    <nav class="sticky-top grey darken-3">
           <ul id="nav-mobile" class="hide-on-med-and-down">
             <li><a href="#free">Free Games</a></li>
             <li><a href="#upcoming">Upcoming Free Games</a></li>
             <li><a href="#sale">Discounted Games</a></li>
           </ul>
-        </div>
       </nav>
             
     <main>
+      <!--contains free games-->
           <div id="free" class="section container-fluid">
             <h3 class="center-align white-text">Free Games of the Week</h3>
             <hr class="white">
             <div id="freeGames" class="row justify-content-evenly">
           </div>
 
-
+      <!--contains upcoming games-->
           <div id="upcoming" class="section container-fluid">
             <h3 class="white-text center-align">Upcoming Free Games</h3>
             <hr class="white">
             <div id="upcomingGames" class="row justify-content-evenly">
           </div>
-
+      
+      <!--Contains games on sale-->
           <div id="sale" class="section container-fluid position-relative">
             <h3 class="center-align white-text">Discounted Games</h3>
             <!--look into material icons-->
@@ -51,19 +50,19 @@
 
             <!-- Dropdown Structure -->
               <ul id='dropdown1' class='dropdown-content'>
-                <li><a href="#!" class="genre">All</a></li>
-                <li><a href="#!" class="genre">Games</a></li>
-                <li><a href="#!" class="genre">GameBundle</a></li>
-                <li><a href="#!" class="genre">GameEdition</a></li>
-                <li><a href="#!" class="genre">GameAddOn</a></li>
-                <li><a href="#!" class="genre">Editor</a></li>
-                <li><a href="#!" class="genre">GameDemo</a></li>
-                <li><a href="#!" class="genre">Apps</a></li>
+                <li><a href="#!" title="All" class="genre">All</a></li>
+                <li><a href="#!" title="Games" class="genre">Games</a></li>
+                <li><a href="#!" title="GameBundle" class="genre">Game Bundles</a></li>
+                <li><a href="#!" title="GameEdition" class="genre">Game Editions</a></li>
+                <li><a href="#!" title="GameAddOn" class="genre">Game Add Ons</a></li>
+                <li><a href="#!" title="Editor" class="genre">Editor</a></li>
+                <li><a href="#!" title="GameDemo" class="genre">Game Demo</a></li>
+                <li><a href="#!" title="Apps" class="genre">Apps</a></li>
               </ul>            
             </div>
-          </div>        
+          </div> 
           <hr class="white">
-
+            <h4 id="sectionTitle" class="text-white center-align"></h4>
             <div id="GamesOnSale" class="row justify-content-evenly">
           </div>         
       </main>
