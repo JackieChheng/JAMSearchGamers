@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var freeGamesUrl = "https://epic-free-games.p.rapidapi.com/epic-free-games?rapidapi-key=dbbe26a28cmsh58d0c330cc6e4fcp1d024ajsnff75918c19c3";
-  var upcomingGamesUrl = "https://epic-free-games.p.rapidapi.com/epic-free-games-coming-soon?rapidapi-key=dbbe26a28cmsh58d0c330cc6e4fcp1d024ajsnff75918c19c3";
+  var freeGamesUrl = "https://epic-free-games.p.rapidapi.com/epic-free-games?rapidapi-key=206b08d759mshb06b9e5b9dbd779p1ec90ajsn4b8ad24f5041";
+  var upcomingGamesUrl = "https://epic-free-games.p.rapidapi.com/epic-free-games-coming-soon?rapidapi-key=206b08d759mshb06b9e5b9dbd779p1ec90ajsn4b8ad24f5041";
   //API's for free games of the week, upcoming free games, and test(Games that are discounted and what not)
   
   $('.dropdown-trigger').dropdown();
@@ -143,6 +143,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function generateGameSale(gameSaleArray) {
   console.log("hey is this working")
+  if(gameSaleArray.length === 0) {
+    var sorryText = document.createElement("h2")
+    sorryText.classList.add("text-white", "center-align")
+    sorryText.textContent = "Sorry, Nothing to show!"
+    GameSaleRow.appendChild(sorryText)
+  }
       for (var i = 0; i < gameSaleArray.length; i++) {
       // HTML elements for card
       var card = document.createElement("div");
@@ -166,7 +172,18 @@ function generateGameSale(gameSaleArray) {
       var p = document.createElement("p");
       p.classList.add("card-text", "d-inline-block");
       p.textContent = gameSaleArray[i].descr;
-      
+
+      var priceContainer = document.createElement("div");
+      priceContainer.classList.add("card-text", "d-inline-block", "row")
+
+      var orPrice = document.createElement('s')
+      orPrice.classList.add("card-text", "text-white", "grey", "darken-3")
+      orPrice.textContent = "Original Price: " + gameSaleArray[i].originalPrice;
+
+      var discount = document.createElement("p")
+      discount.textContent = "Sale Price: " + gameSaleArray[i].salePrice;
+      discount.classList.add("card-text", "text-white", "grey", "darken-3")
+
       var a = document.createElement("a");
       a.href = gameSaleArray[i].link;
       a.classList.add("btn", "btn-primary", "grey", "darken-1")
@@ -179,16 +196,20 @@ function generateGameSale(gameSaleArray) {
       cardBody.appendChild(h5);
       cardBody.appendChild(hr);
       cardBody.appendChild(p);
+      card.appendChild(priceContainer);
+      priceContainer.appendChild(orPrice);
+      priceContainer.appendChild(discount);
       card.appendChild(a);
     }
 }
 
 
-
 $(".genre").on("click", function(){
+    var title = $(this).text();
+    $("#sectionTitle").text(title);
     GameSaleRow.innerHTML = "";
     var gameSaleArray = [];  
-    var genre = $(this).text();
+    var genre = this.title
     console.log(genre);
     var gameSale = "https://epic-store-games.p.rapidapi.com/onSale?searchWords=Mount&categories=" + genre + "&locale=us&country=us&rapidapi-key=206b08d759mshb06b9e5b9dbd779p1ec90ajsn4b8ad24f5041";
   
@@ -204,7 +225,10 @@ $(".genre").on("click", function(){
           name: dataArray[i].title,
           publisher: dataArray[i].publisherName,
           descr: dataArray[i].description,
-          link: dataArray[i].url
+          link: dataArray[i].url,
+          originalPrice: dataArray[i].price.totalPrice.fmtPrice.originalPrice,
+          salePrice: dataArray[i].price.totalPrice.fmtPrice.discountPrice,
+
         }
         gameSaleArray.push(saleGame)
       } 
@@ -213,6 +237,10 @@ $(".genre").on("click", function(){
   })
 
 
+
+
+
+
+
+
 })
-
-
